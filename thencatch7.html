@@ -8,12 +8,12 @@
 <body>
     <h1>Promise Example</h1>
     <script>
-        // Create a new promise that resolves with the value "Completed"
+        
         let r = new Promise((resolve) => {
             resolve("Completed");
         });
 
-        // Handle the promise using .then and .catch
+    
         r.then(value => {
             console.log('Promise resolved with value:', value);
         }).catch(error => {
