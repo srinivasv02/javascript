@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async/Await Example</title>
+</head>
+<body>
+    <h1>Async/Await with Promise Example</h1>
+    <script>
+        function sayHello() { 
+            let promise = new Promise((resolve, reject) => { 
+                setTimeout(() => reject("An error has occurred"), 1000); 
+            }); 
+            return promise; 
+        }
+
+        async function executeSayHello() {
+            try {
+                let result = await sayHello();
+                console.log('Promise resolved with value:', result);
+            } catch (error) {
+                console.error('Promise rejected with error:', error);
+            }
+        }
+
+        // Call the async function
+        executeSayHello();
+    </script>
+</body>
+</html>

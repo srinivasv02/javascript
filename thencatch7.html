@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Example</title>
+</head>
+<body>
+    <h1>Promise Example</h1>
+    <script>
+        // Create a new promise that resolves with the value "Completed"
+        let r = new Promise((resolve) => {
+            resolve("Completed");
+        });
+
+        // Handle the promise using .then and .catch
+        r.then(value => {
+            console.log('Promise resolved with value:', value);
+        }).catch(error => {
+            console.error('Promise rejected with error:', error);
+        });
+    </script>
+</body>
+</html>
