@@ -19,7 +19,7 @@
                     throw new Error('Network response was not ok');
                 }
                 const post = await response.json();
-                console.log(post); // Log the fetched post to the console
+                console.log(post); 
                 const postContainer = document.getElementById('post');
                 const postElement = document.createElement('div');
                 postElement.innerHTML = `
